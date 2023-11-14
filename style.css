@@ -1,0 +1,203 @@
+@import url(css-reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  /* Colors */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsla(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%, 1);
+  --dark-charcoal: hsl(234, 12%, 34%);
+  --pure-white: hsl(0, 0%, 100%);
+
+  /* --fs-700: 1.5rem; */
+  --fs-700: clamp(1.5rem, 3.03vw, 2.25rem);
+  --fs-600: 1.25rem;
+  --fs-400: 0.9375rem;
+  --fs-300: 0.8125rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --lh-400: 1.5625rem;
+  --ff:'Poppins', sans-serif;
+
+  --padding-main: 5rem 2rem;
+  --padding-card: 1.75rem;
+  --br: 0.5rem;
+}
+
+body {
+  min-height: 100vh;
+
+  /* Places the project in the middle */
+  display: grid;
+  place-items: center;
+
+  font-family: var(--ff);
+  color: var(--dark-charcoal);
+  font-size: var(--fs-300);
+}
+
+.project-wrapper {
+  min-width: 23.475rem;
+  max-width: 90rem;
+  padding: var(--padding-main);
+}
+
+header {
+  text-align: center;
+}
+
+.header-title {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-300);
+}
+
+.header-title-addition {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-700);
+}
+
+.header-text {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: var(--lh-400);
+  padding-top: 1rem;
+
+  min-width: 19.4375rem;
+  max-width: 33.75rem;
+}
+
+main > * {
+  margin-top: 1.5rem;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.50);
+  border-radius: var(--br);
+  padding: var(--padding-card);
+}
+
+.card {
+  min-width: 19.4375rem;
+  max-width: 21.875rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card:first-child {
+  margin-top: 4.75rem;
+}
+
+.card__header {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-600);
+}
+
+.card__img {
+  margin-left: auto;
+  margin-right: 0;
+  width: 3.5625rem;
+  margin-top: 2rem;
+}
+
+.card__text {
+  font-size: var(--fw-300);
+}
+
+.cyan {
+  border-top: 0.222rem solid var(--cyan);
+}
+
+.red {
+  border-top: 0.222rem solid var(--red);
+}
+
+.orange {
+  border-top: 0.222rem solid var(--orange);
+}
+
+.blue {
+  border-top: 0.222rem solid var(--blue);
+}
+
+footer * {
+  margin-top: 2rem;
+  font-size: var(--fs-300);
+  color: var(--dark-charcoal);
+  text-align: center;
+}
+
+/* Tablet styling */
+@media screen and (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  .header-text {
+    text-align: center;
+    margin-right: auto ;
+    margin-left: auto;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .card:first-child {
+    margin-top: 0;
+  }
+
+  .cyan {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+  }
+
+  .red {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+  }
+
+  .orange {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+
+  .blue {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+  }
+}
+
+/* Desktop styling */
+@media screen and (min-width: 1188px) {
+  main {
+    grid-template-columns: 3fr;
+    grid-template-rows: 4fr;
+  }
+
+  .cyan {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+  }
+
+  .red {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+
+  .orange {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+  }
+
+  .blue {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+  }
+  
+}
